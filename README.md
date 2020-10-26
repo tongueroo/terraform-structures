@@ -30,17 +30,21 @@ The `live_infra` and `module` folders are 2 separate repos.
 
 Structure:
 
-    .
-    ├── modules
-    │   ├── eks
-    │   ├── instance
-    │   ├── rds
-    │   └── vpc
-    └── stacks
-        └── infra
-            ├── example.tfvars
-            ├── main.tf
-            └── vars.tf
+    └── app
+        ├── modules
+        │   ├── eks
+        │   ├── instance
+        │   ├── rds
+        │   └── vpc
+        └── stacks
+            └── infra
+                ├── main.tf
+                ├── tfvars
+                │   ├── demo.tfvars
+                │   ├── dev.tfvars
+                │   ├── prod.tfvars
+                │   └── test.tfvars
+                └── vars.tf
 
 Terraspace commands:
 
@@ -53,7 +57,6 @@ Terraspace commands:
 
 Structure:
 
-    .
     └── app
         ├── modules
         │   ├── eks
@@ -62,20 +65,24 @@ Structure:
         │   └── vpc
         └── stacks
             ├── demo
-            │   ├── example.tfvars
             │   ├── main.tf
+            │   ├── tfvars
+            │   │   └── base.tfvars
             │   └── vars.tf
             ├── dev
-            │   ├── example.tfvars
             │   ├── main.tf
+            │   ├── tfvars
+            │   │   └── base.tfvars
             │   └── vars.tf
             ├── prod
-            │   ├── example.tfvars
             │   ├── main.tf
+            │   ├── tfvars
+            │   │   └── base.tfvars
             │   └── vars.tf
             └── test
-                ├── example.tfvars
                 ├── main.tf
+                ├── tfvars
+                │   └── base.tfvars
                 └── vars.tf
 
 Just ignore the use of TS_ENV. Terraspace commands:
