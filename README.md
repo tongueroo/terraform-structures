@@ -92,3 +92,42 @@ Just ignore the use of TS_ENV. Terraspace commands:
     terraspace up prod
     terraspace up test
 
+
+## Example 4: Hack Env as Same Stack
+
+The `main.tf` reads in the env-specific files from the `app/stacks/infra/env` folder.
+
+    └── app
+        ├── modules
+        │   ├── eks
+        │   ├── instance
+        │   ├── rds
+        │   └── vpc
+        └── stacks
+            └── infra
+                ├── envs
+                │   ├── demo
+                │   │   ├── main.tf
+                │   │   └── vars.tf
+                │   ├── dev
+                │   │   ├── main.tf
+                │   │   └── vars.tf
+                │   ├── prod
+                │   │   ├── main.tf
+                │   │   └── vars.tf
+                │   └── test
+                │       ├── main.tf
+                │       └── vars.tf
+                ├── main.tf
+                └── tfvars
+                    ├── demo.tfvars
+                    ├── dev.tfvars
+                    ├── prod.tfvars
+                    └── test.tfvars
+
+Terraspace commands:
+
+    TS_ENV=demo terraspace up infra
+    TS_ENV=dev  terraspace up infra
+    TS_ENV=prod terraspace up infra
+    TS_ENV=test terraspace up infra
