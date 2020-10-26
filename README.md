@@ -1,8 +1,7 @@
 ## Example 1: Common structure
 
-* live_infra and module are 2 separate repos
+The `live_infra` and `module` folders are 2 separate repos.
 
-    .
     ├── live_infra
     │   ├── demo
     │   │   ├── example.tfvars
