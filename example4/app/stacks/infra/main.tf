@@ -12,7 +12,7 @@
 #    app/stacks/infra/envs/dev/main.tf
 #
 stack = File.expand_path(".", __dir__)
-expr = "#{stack}/#{Terraspace.env}/**.tf"
+expr = "#{stack}/envs/#{Terraspace.env}/**.tf"
 Dir.glob(expr).each do |path|
   mod = Terraspace::Mod.new("infra")
   puts Terraspace::Compiler::Erb.new(mod, path).build
