@@ -1,5 +1,5 @@
 <%
-# Loads tf files env specific folder and as main.tf
+# Loads tf files env specific folder
 # Example:
 #
 #    app/stacks/infra/envs/demo
