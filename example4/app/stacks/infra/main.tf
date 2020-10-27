@@ -1,4 +1,4 @@
-<%
+<%=
 # Loads tf files env specific folder
 # Example:
 #
