@@ -14,6 +14,6 @@
 stack = File.expand_path(".", __dir__)
 expr = "#{stack}/#{Terraspace.env}/**.tf"
 Dir.glob(expr).each do |path|
-  puts IO.read(path)
+  instance_eval(IO.read(path))
 end
 %>
