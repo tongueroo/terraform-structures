@@ -95,7 +95,7 @@ Just ignore the use of TS_ENV. Terraspace commands:
 
 ## Example 4: Hack Env as Same Stack
 
-The [app/stacks/infra/main.tf](example4/app/stacks/infra/main.tf) reads in the env-specific files from the `app/stacks/infra/env` folder.
+The [app/stacks/infra/main.tf](example4/app/stacks/infra/main.tf) reads in the env-specific files from the `app/stacks/infra/envs` folder.
 
     └── app
         ├── modules
