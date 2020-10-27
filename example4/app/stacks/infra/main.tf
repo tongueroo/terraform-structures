@@ -14,6 +14,7 @@
 stack = File.expand_path(".", __dir__)
 expr = "#{stack}/#{Terraspace.env}/**.tf"
 Dir.glob(expr).each do |path|
-  instance_eval(IO.read(path))
+  mod = Terraspace::Mod.new("infra")
+  Terraspace::Compiler::Erb.new(mod, path).build
 end
 %>
