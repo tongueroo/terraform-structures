@@ -10,6 +10,7 @@
 # Specific dev env example:
 #
 #    app/stacks/infra/envs/dev/main.tf
+#    app/stacks/infra/envs/dev/outputs.tf
 #
 stack = File.expand_path(".", __dir__)
 expr = "#{stack}/envs/#{Terraspace.env}/**.tf"
