@@ -107,17 +107,13 @@ The `main.tf` reads in the env-specific files from the `app/stacks/infra/env` fo
             └── infra
                 ├── envs
                 │   ├── demo
-                │   │   ├── main.tf
-                │   │   └── vars.tf
+                │   │   └── main.tf
                 │   ├── dev
-                │   │   ├── main.tf
-                │   │   └── vars.tf
+                │   │   └── main.tf
                 │   ├── prod
-                │   │   ├── main.tf
-                │   │   └── vars.tf
+                │   │   └── main.tf
                 │   └── test
-                │       ├── main.tf
-                │       └── vars.tf
+                │       └── main.tf
                 ├── main.tf
                 └── tfvars
                     ├── demo.tfvars
